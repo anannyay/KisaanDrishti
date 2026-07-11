@@ -1,4 +1,4 @@
-# CropPulse
+# KisaanDrishti
 
 Android-first crop-health monitoring system with real RGB image measurements, longitudinal plant passports, intervention-response tracking and farmer-friendly field insights.
 
