@@ -1,0 +1,2 @@
+observation_id,plant_id,plot_id,crop,cultivar,captured_at,image_path,phone_model,growth_stage,intervention,canopy_coverage_pct,green_pct,yellowing_pct,browning_pct,expert_health_score,notes
+obs-0001,T-001,plot-a,turmeric,local,2026-07-11T08:00:00+05:30,images/T-001/2026-07-11.jpg,example-phone,vegetative,none,,,,,,replace this example row

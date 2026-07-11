@@ -5,3 +5,8 @@ dist/
 __pycache__/
 *.pyc
 .pytest_cache/
+research/.test_tmp/
+artifacts/
+research/manifest.csv
+research/temporal_baseline.joblib
+research/metrics.json

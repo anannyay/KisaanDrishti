@@ -2,6 +2,8 @@
 
 Android-first crop-health monitoring system with real RGB image measurements, longitudinal plant passports, intervention-response tracking and farmer-friendly field insights.
 
+> **Status:** verified functional MVP and transparent RGB baseline. Field dataset collection and agronomic validation are the next research phase; CropPulse is not a disease diagnostic system.
+
 ## Run
 
 ### 1. Start the real image-analysis API
@@ -69,3 +71,15 @@ FastAPI analysis service
   ├─ colour/coverage measurements
   └─ versioned, non-diagnostic result
 ```
+
+## Research pipeline
+
+The `research/` directory contains a field manifest, collection protocol, dataset validator and leakage-safe temporal baseline. Training splits are grouped by plant ID so repeated images of the same plant never appear in both train and test sets.
+
+```bash
+python research/validate_dataset.py research/manifest.csv
+python research/train_temporal_baseline.py research/manifest.csv --output artifacts
+python -m unittest discover -s research -p "test_*.py"
+```
+
+See [`research/FIELD_PROTOCOL.md`](research/FIELD_PROTOCOL.md) before collecting data.
