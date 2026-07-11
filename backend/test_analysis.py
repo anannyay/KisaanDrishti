@@ -6,6 +6,7 @@ import numpy as np
 from PIL import Image
 
 from croppulse_analysis import analyze_bytes, assess_quality, measure, segment_plant
+from wheat_model import predict_wheat
 
 
 class AnalysisTests(unittest.TestCase):
@@ -30,6 +31,14 @@ class AnalysisTests(unittest.TestCase):
         result = analyze_bytes(out.getvalue())
         self.assertEqual(result["version"], "rgb-baseline-1")
         self.assertGreater(result["metrics"]["green_pct"], 50)
+
+    def test_trained_wheat_model_loads(self):
+        bgr = np.full((250, 250, 3), 240, np.uint8)
+        cv2.rectangle(bgr, (45, 45), (205, 205), (30, 150, 40), -1)
+        out = BytesIO(); Image.fromarray(cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)).save(out, format="JPEG")
+        result = predict_wheat(out.getvalue())
+        self.assertIn(result["label"], {"healthy", "leaf_rust", "nitrogen_deficient"})
+        self.assertAlmostEqual(sum(result["probabilities"].values()), 1.0, places=3)
 
 
 if __name__ == "__main__":

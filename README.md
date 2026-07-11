@@ -37,6 +37,18 @@ Scan the Expo QR code with Expo Go, or press `a` for an Android emulator. For a 
 - Intervention-response views and field anomaly summaries
 - English/Hindi/Marathi translation foundation
 - FastAPI health-analysis service, Docker deployment and automated analysis tests
+- Trained Indian wheat model for healthy, nitrogen-deficient and leaf-rust imagery
+
+## Trained Indian wheat baseline
+
+The bundled `iari-wheat-cnn-v1` model was trained on the public IARI Wheat Nitrogen Deficiency and Leaf Rust dataset (DOI `10.17632/th422bg4yd.1`). The preparation pipeline streamed nested archives, resized images to 224 px, removed 70 exact duplicates across splits and found no corrupt images.
+
+- Unique images: 1,389
+- Untouched test accuracy: **90.32%**
+- Macro-F1: **0.8839**
+- Classes: healthy, leaf rust, nitrogen deficiency
+
+Nitrogen deficiency is the weakest class and must not be treated as a reliable agronomic diagnosis. See `research/IARI_WHEAT_REPORT.md` and `MODEL_CARD.md`.
 
 ## Scientific boundary
 

@@ -4,3 +4,5 @@ opencv-python-headless>=4.10,<5
 numpy>=2,<3
 Pillow>=11,<12
 pydantic>=2.9,<3
+torch>=2.6,<3
+torchvision>=0.21,<1

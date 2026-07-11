@@ -7,6 +7,8 @@ __pycache__/
 .pytest_cache/
 research/.test_tmp/
 artifacts/
+data/raw/
+data/processed/
 research/manifest.csv
 research/temporal_baseline.joblib
 research/metrics.json

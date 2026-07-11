@@ -11,6 +11,11 @@ export type AnalysisResult = {
   };
   evidence: string[];
   disclaimer: string;
+  wheat_model?: {
+    label: 'healthy' | 'leaf_rust' | 'nitrogen_deficient'; confidence: number;
+    probabilities: Record<string, number>; model: string; reliable: boolean;
+    scope: string; disclaimer: string;
+  };
 };
 
 export type SavedObservation = {
