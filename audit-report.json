@@ -1,0 +1,366 @@
+﻿{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@expo/cli": {
+      "name": "@expo/cli",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@expo/config",
+        "@expo/config-plugins",
+        "@expo/metro-config",
+        "@expo/prebuild-config",
+        "expo"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo/node_modules/@expo/cli"
+      ],
+      "fixAvailable": true
+    },
+    "@expo/config": {
+      "name": "@expo/config",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@expo/config-plugins"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/@expo/config"
+      ],
+      "fixAvailable": true
+    },
+    "@expo/config-plugins": {
+      "name": "@expo/config-plugins",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "xcode"
+      ],
+      "effects": [
+        "@expo/config"
+      ],
+      "range": "",
+      "nodes": [
+        "node_modules/@expo/config-plugins"
+      ],
+      "fixAvailable": true
+    },
+    "@expo/metro-config": {
+      "name": "@expo/metro-config",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@expo/config",
+        "expo",
+        "postcss"
+      ],
+      "effects": [
+        "@expo/cli",
+        "expo"
+      ],
+      "range": "",
+      "nodes": [
+        "node_modules/expo/node_modules/@expo/metro-config"
+      ],
+      "fixAvailable": false
+    },
+    "@expo/prebuild-config": {
+      "name": "@expo/prebuild-config",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@expo/config",
+        "@expo/config-plugins",
+        "expo"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo/node_modules/@expo/cli/node_modules/@expo/prebuild-config"
+      ],
+      "fixAvailable": true
+    },
+    "@expo/vector-icons": {
+      "name": "@expo/vector-icons",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "expo-font"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/@expo/vector-icons"
+      ],
+      "fixAvailable": false
+    },
+    "babel-preset-expo": {
+      "name": "babel-preset-expo",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "expo"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo/node_modules/babel-preset-expo"
+      ],
+      "fixAvailable": true
+    },
+    "expo": {
+      "name": "expo",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "@expo/cli",
+        "@expo/config",
+        "@expo/config-plugins",
+        "@expo/metro-config",
+        "@expo/vector-icons",
+        "babel-preset-expo",
+        "expo-asset",
+        "expo-constants",
+        "expo-file-system",
+        "expo-font",
+        "expo-keep-awake"
+      ],
+      "effects": [
+        "@expo/prebuild-config",
+        "babel-preset-expo",
+        "expo-asset",
+        "expo-constants",
+        "expo-file-system",
+        "expo-font",
+        "expo-image-loader",
+        "expo-image-picker",
+        "expo-keep-awake",
+        "expo-linear-gradient"
+      ],
+      "range": "",
+      "nodes": [
+        "node_modules/expo"
+      ],
+      "fixAvailable": false
+    },
+    "expo-asset": {
+      "name": "expo-asset",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "expo",
+        "expo-constants"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo/node_modules/expo-asset"
+      ],
+      "fixAvailable": true
+    },
+    "expo-constants": {
+      "name": "expo-constants",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@expo/config",
+        "expo"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo/node_modules/expo-constants"
+      ],
+      "fixAvailable": true
+    },
+    "expo-file-system": {
+      "name": "expo-file-system",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "expo"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo/node_modules/expo-file-system"
+      ],
+      "fixAvailable": true
+    },
+    "expo-font": {
+      "name": "expo-font",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "expo"
+      ],
+      "effects": [
+        "@expo/vector-icons"
+      ],
+      "range": "",
+      "nodes": [
+        "node_modules/expo-font",
+        "node_modules/expo/node_modules/expo-font"
+      ],
+      "fixAvailable": false
+    },
+    "expo-image-loader": {
+      "name": "expo-image-loader",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "expo"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo-image-loader"
+      ],
+      "fixAvailable": true
+    },
+    "expo-image-picker": {
+      "name": "expo-image-picker",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "expo",
+        "expo-image-loader"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo-image-picker"
+      ],
+      "fixAvailable": false
+    },
+    "expo-keep-awake": {
+      "name": "expo-keep-awake",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "expo"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo/node_modules/expo-keep-awake"
+      ],
+      "fixAvailable": true
+    },
+    "expo-linear-gradient": {
+      "name": "expo-linear-gradient",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "expo"
+      ],
+      "effects": [],
+      "range": "",
+      "nodes": [
+        "node_modules/expo-linear-gradient"
+      ],
+      "fixAvailable": false
+    },
+    "postcss": {
+      "name": "postcss",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1117015,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
+          "url": "https://github.com/advisories/GHSA-qx2v-qp2m-jg93",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": "<8.5.10"
+        }
+      ],
+      "effects": [
+        "@expo/metro-config"
+      ],
+      "range": "",
+      "nodes": [
+        "node_modules/postcss"
+      ],
+      "fixAvailable": false
+    },
+    "uuid": {
+      "name": "uuid",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1119441,
+          "name": "uuid",
+          "dependency": "uuid",
+          "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+          "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-787",
+            "CWE-1285"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": "<11.1.1"
+        }
+      ],
+      "effects": [
+        "xcode"
+      ],
+      "range": "",
+      "nodes": [
+        "node_modules/uuid"
+      ],
+      "fixAvailable": true
+    },
+    "xcode": {
+      "name": "xcode",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "uuid"
+      ],
+      "effects": [
+        "@expo/config-plugins"
+      ],
+      "range": "",
+      "nodes": [
+        "node_modules/xcode"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 19,
+      "high": 0,
+      "critical": 0,
+      "total": 19
+    },
+    "dependencies": {
+      "prod": 766,
+      "dev": 0,
+      "optional": 12,
+      "peer": 1,
+      "peerOptional": 0,
+      "total": 778
+    }
+  }
+}

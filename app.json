@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "CropPulse",
+    "slug": "croppulse",
+    "version": "1.0.0",
+    "jsEngine": "jsc",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "in.croppulse.app",
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
+    },
+    "plugins": [
+      ["expo-image-picker", {"photosPermission": "CropPulse uses plant photos to measure crop health over time.", "cameraPermission": "CropPulse uses the camera to scan plants."}]
+    ]
+  }
+}
